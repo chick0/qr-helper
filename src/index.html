@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="chick_0">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, shrink-to-fit=no">
+        <title>QR 코드 생성기</title>
+        <link rel="stylesheet" as="style" crossorigin  href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+        <link rel="stylesheet" as="style" href="/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>QR 코드 생성기</h1>
+
+            <div class="two-box">
+                <div>
+                    <div>
+                        <label for="type">QR코드 유형</label>
+                        <select id="type">
+                            <option value="1">URL</option>
+                            <option value="2">Wi-fi</option>
+                        </select>
+                    </div>
+
+                    <div id="1" class="hide">
+                        <label for="url">URL</label>
+                        <input type="url" id="url" placeholder="https://ch1ck.xyz">
+                        <p>올바른 URL을 입력해주세요!</p>
+                    </div>
+
+                    <div id="2" class="hide">
+                        <label for="ssid">이름</label>
+                        <input type="text" id="ssid" placeholder="someTIME">
+
+                        <label for="proto">보안</label>
+                        <select id="proto">
+                            <option value="WPA">WPA / WPA2</option>
+                            <option value="WEP">WEP</option>
+                            <option value="">비밀번호 없음</option>
+                        </select>
+
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" placeholder="P@SSW0RD">
+
+                        <input type="checkbox" id="hidden">
+                        <label for="hidden">이 Wi-fi는 숨겨져 있습니다.</label>
+                    </div>
+
+                    <div id="buttons">
+                        <button id="download">다운로드</button>
+                    </div>
+                </div>
+                <div id="qrcode"></div>
+            </div>
+        </div>
+
+        <script src="/qrcode.min.js"></script>
+        <script src="/index.js"></script>
+    </body>
+</html>
